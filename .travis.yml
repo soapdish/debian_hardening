@@ -1,11 +1,12 @@
+---
 sudo: required
-
-services:
-  - docker
 
 env:
   - distribution: debian
     version: stretch
+
+services:
+  - docker
 
 before_install:
   - 'sudo docker pull ${distribution}:${version}'
