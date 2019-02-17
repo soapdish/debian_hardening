@@ -13,16 +13,16 @@
     name: ntpd
     enabled: yes
     state: started
-    when:
-      - ansible_facts['distribution'] == "CentOS"
+  when:
+    - ansible_facts['distribution'] == "CentOS"
 
 - name: Ntp | Ensure ntp service is enabled and started on "CentOS"
   service:
     name: ntp
     enabled: yes
     state: started
-    when:
-      - ansible_facts['distribution'] == "Debian"
+  when:
+    - ansible_facts['distribution'] == "Debian"
 
 #- name: Fail2ban | Manually activate fail2ban
 #  command: service fail2ban start
