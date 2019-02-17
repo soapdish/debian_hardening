@@ -3,3 +3,8 @@
   yum:
     name: nginx
     state: present
+
+- name: Ntp | YUM | Ensure Ntp package is installed
+  yum:
+    name: ntp
+    state: present
