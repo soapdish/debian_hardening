@@ -13,3 +13,9 @@
     name: ntp
     enabled: yes
     state: started
+
+- name: Fail2ban | Ensure fail2ban service is enabled and started
+  service:
+    name: fail2ban
+    enabled: yes
+    state: started

@@ -8,3 +8,8 @@
   yum:
     name: ntp
     state: present
+
+- name: Fail2ban | YUM | Ensure Fail2ban package is installed
+  yum:
+    name: Fail2ban
+    state: present
