@@ -47,12 +47,14 @@ shr1mac1:debian_hardening nsheridan$ tree
     └── test.yml
 ```
 
-CI File:
+### CI File
 
 * .travis.yml
 
 Note the travis yaml file is not interpreted correctly by vscode and will show errors when none exist.
 
-Meta:
+Add the notifications to get a slack message when the build is run.
+
+### Meta
 
 The guy who originally wrote this repo
