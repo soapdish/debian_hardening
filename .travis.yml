@@ -8,8 +8,8 @@ notifications:
 env:
   - distribution: debian
     version: stretch
-  - distribution: centos
-    version: 7
+  #- distribution: centos
+  #  version: 7
 
 services:
   - docker
