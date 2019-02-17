@@ -11,5 +11,5 @@
 
 - name: Fail2ban | DNF | Ensure Fail2ban package is installed
   dnf:
-    name: Fail2ban
+    name: fail2ban
     state: present

@@ -11,5 +11,5 @@
 
 - name: Fail2ban | APT | Ensure Fail2ban package is installed
   apt:
-    name: Fail2ban
+    name: fail2ban
     state: present

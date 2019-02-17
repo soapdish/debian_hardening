@@ -11,5 +11,5 @@
 
 - name: Fail2ban | YUM | Ensure Fail2ban package is installed
   yum:
-    name: Fail2ban
+    name: fail2ban
     state: present
