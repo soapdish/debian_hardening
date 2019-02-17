@@ -3,7 +3,7 @@ sudo: required
 
 notifications:
   slack: papillon-builds:qlWHr8S62BKjZs2ONrvJ7ETH
-    #on_success: always
+    on_success: always
 
 env:
   - distribution: debian
