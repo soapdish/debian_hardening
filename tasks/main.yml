@@ -10,6 +10,6 @@
 
 - name: Ntp | Ensure ntp service is enabled and started
   service:
-    name: ntp
+    name: ntpd
     enabled: yes
     state: started
