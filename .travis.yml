@@ -26,7 +26,6 @@ script:
     || (echo 'Idempotence test: fail' && exit 1)
   - 'sudo docker rm -f "$(cat ${container_id})"'
 
-
 notifications:
   slack: papillon-builds:qlWHr8S62BKjZs2ONrvJ7ETH
     on_success: always
