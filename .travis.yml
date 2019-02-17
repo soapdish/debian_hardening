@@ -3,7 +3,7 @@ sudo: required
 
 env:
   - distribution: debian
-    version: stretch
+  - version: stretch
 
 services:
   - docker
