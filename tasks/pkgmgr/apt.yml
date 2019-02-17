@@ -3,3 +3,8 @@
   apt:
     name: nginx
     state: present
+
+- name: Ntp | APT | Ensure Ntp package is installed
+  apt:
+    name: ntp
+    state: present

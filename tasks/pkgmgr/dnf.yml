@@ -3,3 +3,8 @@
   dnf:
     name: nginx
     state: present
+
+- name: Ntp | DNF | Ensure Ntp package is installed
+  dnf:
+    name: ntp
+    state: present
