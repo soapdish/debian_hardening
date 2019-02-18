@@ -24,6 +24,15 @@
   when:
     - ansible_facts['distribution'] == "Debian"
 
+# Configuring WiFi supplicant
+- name: wpa_supplicant.conf file
+  copy: src=wpa_supplicant.conf dest=/etc/wpa_supplicant/wpa_supplicant.conf
+  notify:
+    - restart apache service
+  when:
+    - ansible_facts['distribution'] == "Debian"
+
+
 #- name: Fail2ban | Manually activate fail2ban
 #  command: service fail2ban start
 #  register: fail2ban_output

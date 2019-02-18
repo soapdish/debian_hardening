@@ -46,6 +46,22 @@ shr1mac1:debian_hardening nsheridan$ tree
     ├── Dockerfile.ubuntu-xenial
     └── test.yml
 ```
+### WiFi Configuration
+
+To create the files needed for the template for Wireless, run the following utility to work out the contents of the 
+/etc/wpa_supplicant/wpa_supplicant.conf file.
+
+```bash
+nsheridan@rpi7:~ $ wpa_passphrase some_ssid
+# reading passphrase from stdin
+wibblewobble
+network={
+	ssid="some_ssid"
+	#psk="wibblewobble"
+	psk=1d9430139d58e14925e0e496ad0905d238cc7e67add821e52c2c7c78d10b83ae
+}
+nsheridan@rpi7:~ $ 
+```
 
 ### CI File
 
