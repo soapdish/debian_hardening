@@ -24,7 +24,12 @@
   when:
     - ansible_facts['distribution'] == "Debian"
 
-# Configuring WiFi supplicant
+# Create the WiFi directory if no present
+- name: Creates directory
+  file:
+    path: /etc/wpa_supplicant/
+    state: directory
+
 - name: wpa_supplicant.conf file
   copy: src=wpa_supplicant.conf dest=/etc/wpa_supplicant/wpa_supplicant.conf
   notify:
