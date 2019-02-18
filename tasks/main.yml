@@ -32,8 +32,6 @@
 
 - name: wpa_supplicant.conf file
   copy: src=wpa_supplicant.conf dest=/etc/wpa_supplicant/wpa_supplicant.conf
-  notify:
-    - restart apache service
   when:
     - ansible_facts['distribution'] == "Debian"
 
