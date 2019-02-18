@@ -1,11 +1,11 @@
 ---
 galaxy_info:
-  author: Ignacio Sanchez Gines
-  description: Demo role for installing Nginx on multiple platforms
+  author: Nik Sheridan (heavily borrowed from Ignacio Sanchez Gines)
+  description: Role for prepping a Raspberry Pi for used as a monitoring system
   company:
   license: license (MIT)
   min_ansible_version: 2.0.0
-  issue_tracker_url: https://github.com/drhelius/travis-ansible-demo/issues
+  issue_tracker_url: https://github.com/soapdish/debian_hardening/issues
   github_branch: master
 
   platforms:
