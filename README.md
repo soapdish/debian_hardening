@@ -17,6 +17,7 @@ Mirrors [here](http://mirror.ox.ac.uk/sites/archive.raspbian.org/archive/raspbia
 
 ## Understanding how this is used
 
+
 Note the following file structure:
 
 ```bash
