@@ -13,3 +13,8 @@
   apt:
     name: fail2ban
     state: present
+
+- name: Sshd | APT | Ensure SSH package is installed
+  apt:
+    name: sshd
+    state: present

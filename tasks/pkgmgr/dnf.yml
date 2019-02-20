@@ -13,3 +13,8 @@
   dnf:
     name: fail2ban
     state: present
+
+- name: Sshd | APT | Ensure SSH package is installed
+  dnf:
+    name: sshd
+    state: present
