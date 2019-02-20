@@ -16,9 +16,17 @@
   when:
     - ansible_facts['distribution'] == "CentOS"
 
-- name: Ntp | Ensure ntp service is enabled and started on "CentOS"
+- name: Ntp | Ensure ntp service is enabled and started on "Debian"
   service:
     name: ntp
+    enabled: yes
+    state: started
+  when:
+    - ansible_facts['distribution'] == "Debian"
+
+- name: Ntp | Ensure ssh service is enabled and started on "Debian"
+  service:
+    name: sshd
     enabled: yes
     state: started
   when:
