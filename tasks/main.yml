@@ -1,14 +1,14 @@
 ---
-- name: Nginx | Installation
+- name: NGINX | Installation
   include_tasks: "pkgmgr/{{ ansible_pkg_mgr }}.yml"
 
-- name: Nginx | Ensure Nginx service is enabled and started
+- name: NGINX | Ensure Nginx service is enabled and started
   service:
     name: nginx
     enabled: yes
     state: started
 
-- name: Ntp | Ensure ntp service is enabled and started on "CentOS"
+- name: NTP | Ensure ntp service is enabled and started on "CentOS"
   service:
     name: ntpd
     enabled: yes
@@ -16,7 +16,7 @@
   when:
     - ansible_facts['distribution'] == "CentOS"
 
-- name: Ntp | Ensure ntp service is enabled and started on "Debian"
+- name: NTP | Ensure ntp service is enabled and started on "Debian"
   service:
     name: ntp
     enabled: yes
@@ -24,17 +24,17 @@
   when:
     - ansible_facts['distribution'] == "Debian"
 
-- name: Ntp | Ensure ssh service is enabled and started on "CentOS"
+- name: SSH | Ensure ssh service is enabled and started on "CentOS"
   service:
-    name: openssh-server
+    name: sshd
     enabled: yes
     state: started
   when:
     - ansible_facts['distribution'] == "CentOS"
 
-- name: Ntp | Ensure ssh service is enabled and started on "Debian"
+- name: SSH | Ensure ssh service is enabled and started on "Debian"
   service:
-    name: openssh-server
+    name: sshd
     enabled: yes
     state: started
   when:
