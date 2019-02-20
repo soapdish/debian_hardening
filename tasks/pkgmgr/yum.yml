@@ -16,5 +16,5 @@
 
 - name: Ssh | YUM | Ensure SSH package is installed
   yum:
-    name: ssh
+    name: openssh-server
     state: present

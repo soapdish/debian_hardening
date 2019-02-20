@@ -16,5 +16,5 @@
 
 - name: Ssh | APT | Ensure SSH package is installed
   apt:
-    name: ssh
+    name: openssh-server
     state: present

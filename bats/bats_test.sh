@@ -17,6 +17,6 @@
 }
 
 @test "Check to see if sshd is running" {
-        run systemctl status sshd
+        run systemctl status openssh-server
         [[ ${lines[2]} =~ "running" ]]
 }
