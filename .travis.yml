@@ -28,4 +28,5 @@ script:
     | grep -q 'changed=0.*failed=0'
     && (echo 'Idempotence test: pass' && exit 0)
     || (echo 'Idempotence test: fail' && exit 1)
+  - 'sudo docker exec "$(cat ${container_id})" env ANSIBLE_FORCE_COLOR=1 bats /etc/ansible/roles/rpi_role/bats/bats_test.sh'
   - 'sudo docker rm -f "$(cat ${container_id})"'
