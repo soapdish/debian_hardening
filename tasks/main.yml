@@ -30,7 +30,7 @@
     path: /etc/wpa_supplicant/
     state: directory
 
-# Copy across the template file
+# Copy across the template file if distribtion is Debian
 - name: WiFi | Copy wpa_supplicant.conf file to WiFi configuration directory
   copy: 
     src: wpa_supplicant.conf 
