@@ -31,7 +31,7 @@
     state: directory
 
 # Copy across the template file
-- name: wpa_supplicant.conf file
+- name: WiFi | Copy wpa_supplicant.conf file to WiFi configuration directory
   copy: 
     src: wpa_supplicant.conf 
     dest: /etc/wpa_supplicant/wpa_supplicant.conf
