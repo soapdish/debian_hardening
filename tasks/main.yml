@@ -32,7 +32,9 @@
 
 # Copy across the template file
 - name: wpa_supplicant.conf file
-  copy: src=wpa_supplicant.conf dest=/etc/wpa_supplicant/wpa_supplicant.conf
+  copy: 
+    src: wpa_supplicant.conf 
+    dest: /etc/wpa_supplicant/wpa_supplicant.conf
   when:
     - ansible_facts['distribution'] == "Debian"
 
