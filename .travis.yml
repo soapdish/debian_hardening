@@ -30,5 +30,5 @@ script:
     || (echo 'Idempotence test: fail' && exit 1)
   - 'sudo docker exec "$(cat ${container_id})" ls -la /etc/ansible/roles/rpi_role/'
   #- 'sudo docker exec "$(cat ${container_id})" bats /etc/ansible/roles/rpi_role/bats/bats_test.sh'
-  - 'sudo docker exec "$(cat ${container_id})" /usr/bin/bats /etc/ansible/roles/rpi_role/bats/bats bats_test.sh'
+  - 'sudo docker exec "$(cat ${container_id})" /usr/bin/bats /etc/ansible/roles/rpi_role/bats/bats_test.sh'
   - 'sudo docker rm -f "$(cat ${container_id})"'
