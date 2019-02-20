@@ -14,7 +14,7 @@
     name: fail2ban
     state: present
 
-- name: Sshd | APT | Ensure SSH package is installed
+- name: Sshd | YUM | Ensure SSH package is installed
   yum:
     name: sshd
     state: present
