@@ -10,7 +10,7 @@
 
 - name: NTP | Ensure ntp service is enabled and started on "CentOS"
   service:
-    name: ntpd
+    name: ntp.x86_64
     enabled: yes
     state: started
   when:
