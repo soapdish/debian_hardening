@@ -12,6 +12,7 @@
         - unzip
         - sudo
         - which
+        - epel-release
       when: ansible_os_family == 'RedHat'
 
     - name: Ensure build dependencies are installed (Debian)
