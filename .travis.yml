@@ -20,15 +20,15 @@ before_install:
 
 script:
   - container_id=$(mktemp)
-  - 'sudo docker run --detach --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro --volume="${PWD}":/etc/ansible/roles/rpi_role:ro ${distribution}-${version}:ansible > "${container_id}"'
-  - 'sudo docker exec "$(cat ${container_id})" env ANSIBLE_FORCE_COLOR=1 ansible-playbook -v /etc/ansible/roles/rpi_role/travis/test.yml --syntax-check'
-  - 'sudo docker exec "$(cat ${container_id})" env ANSIBLE_FORCE_COLOR=1 ansible-playbook -v /etc/ansible/roles/rpi_role/travis/test.yml'
+  - 'sudo docker run --detach --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro --volume="${PWD}":/etc/ansible/roles/debian_hardening:ro ${distribution}-${version}:ansible > "${container_id}"'
+  - 'sudo docker exec "$(cat ${container_id})" env ANSIBLE_FORCE_COLOR=1 ansible-playbook -v /etc/ansible/roles/debian_hardening/travis/test.yml --syntax-check'
+  - 'sudo docker exec "$(cat ${container_id})" env ANSIBLE_FORCE_COLOR=1 ansible-playbook -v /etc/ansible/roles/debian_hardening/travis/test.yml'
   - >
-    sudo docker exec "$(cat ${container_id})" env ANSIBLE_FORCE_COLOR=1 ansible-playbook -v /etc/ansible/roles/rpi_role/travis/test.yml
+    sudo docker exec "$(cat ${container_id})" env ANSIBLE_FORCE_COLOR=1 ansible-playbook -v /etc/ansible/roles/debian_hardening/travis/test.yml
     | grep -q 'changed=0.*failed=0'
     && (echo 'Idempotence test: pass' && exit 0)
     || (echo 'Idempotence test: fail' && exit 1)
-  - 'sudo docker exec "$(cat ${container_id})" ls -la /etc/ansible/roles/rpi_role/'
-  #- 'sudo docker exec "$(cat ${container_id})" bats /etc/ansible/roles/rpi_role/bats/bats_test.sh'
-  - 'sudo docker exec "$(cat ${container_id})" /usr/bin/bats /etc/ansible/roles/rpi_role/bats/bats_test.sh'
+  - 'sudo docker exec "$(cat ${container_id})" ls -la /etc/ansible/roles/debian_hardening/'
+  #- 'sudo docker exec "$(cat ${container_id})" bats /etc/ansible/roles/debian_hardening/bats/bats_test.sh'
+  - 'sudo docker exec "$(cat ${container_id})" /usr/bin/bats /etc/ansible/roles/debian_hardening/bats/bats_test.sh'
   - 'sudo docker rm -f "$(cat ${container_id})"'
