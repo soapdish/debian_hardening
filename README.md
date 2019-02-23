@@ -1,5 +1,7 @@
 # Debian Hardening [![Build Status](https://travis-ci.org/soapdish/debian_hardening.svg?branch=master)](https://travis-ci.org/soapdish/debian_hardening)
 
+Use the latest version of ansible!!  2.7>
+
 Testing Debian Ansible Hardening Roles with Travis CI.  The goal it to automate testing on ansible roles in order to provide a 
 set of hardening actions that can be performed on a Raspberry Pi.  
 
