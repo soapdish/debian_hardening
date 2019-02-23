@@ -14,7 +14,7 @@
     enabled: yes
     state: started
   when:
-    - ansible_facts['distribution'] == "CentOS"
+    - ansible_facts['ansible_distribution'] == "CentOS"
 
 - name: NTP | Ensure ntp service is enabled and started on "Debian"
   service:
